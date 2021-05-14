@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=h">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="changA()">A++</button>
+        <button v-on:click="changB()">A++</button>
+        <p>{{a}}</p>
+        <p>{{changB()}}</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                a: "",
+                b: ""
+            },
+            methods: {
+                changA() {
+                    console.log("this is a:" + this.a);
+                    this.a += 1;
+                },
+                changB() {
+                    console.log("this is b:" + this.b);
+                    this.a += 1;    
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
